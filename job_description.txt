@@ -1,0 +1,13 @@
+Python
+Flask
+MySQL
+REST API
+Git
+GitHub
+HTML
+CSS
+JavaScript
+Bootstrap
+Docker
+AWS
+Linux

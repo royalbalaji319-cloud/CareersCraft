@@ -1,0 +1,313 @@
+body {
+  margin: 0;
+  padding-top: 80px;   /* 🔥 space for fixed navbar */
+  min-height: 100vh;   /* page grows with content */
+  background: url("{{ url_for('static', filename='images/bg-tech2.jpg') }}");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-y: auto;     /* 🔥 allow vertical scroll */
+  overflow-x: hidden;   /* prevent horizontal scroll */
+}
+
+/* Navbar background color change */
+.navbar {
+  background-color: #000000 !important; /* 🔥 Blue navbar */
+}
+
+/* Navbar brand text color */
+.navbar .navbar-brand {
+  color: #ffcc00 !important; /* Yellow brand text */
+}
+
+/* Navbar buttons */
+.navbar .btn {
+  background-color: #084a56; /* Green buttons */
+  color: #fff;
+  border: none;
+}
+
+.navbar .btn:hover {
+  background-color: #070984; /* Darker green on hover */
+}
+
+
+
+/* Floating computer symbols */
+.symbol {
+  position: absolute;
+  font-size: 150px;
+  color: rgba(255, 255, 255, 0.25);
+  animation: float 25s linear infinite;
+  z-index: 1; /* symbols stay behind */
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* 🔥 Card background static, always above background */
+.card {
+  background-color: rgba(0, 0, 0, 0.7); /* dark semi-transparent */
+  color: #fff; /* text visible */
+  border: none;
+  position: relative;   /* card positioning */
+  z-index: 10;          /* ensures card stays above symbols */
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: none;
+}
+h2.text-primary {
+  font-weight: 900;       /* 🔥 extra bold */
+  font-size: 2.0rem;      /* bigger font */
+  color: #03b3f3 !important; /* bright yellow for visibility */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* shadow for contrast */
+  background-color: rgba(0, 0, 0, 0.503); /* semi-transparent bg */
+  padding: 10px 20px;     /* spacing inside bg */
+  border-radius: 8px;     /* rounded corners */
+  display: inline-block;  /* bg wraps text only */
+}
+
+
+/* General responsive card styling */
+.card {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* Headings responsive */
+h2, h3, h4 {
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* smaller navbar space */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navbar-brand {
+    font-size: 28px !important; /* smaller brand text */
+  }
+
+  .card {
+    margin: 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .card-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+  }
+
+  button.btn {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 992px) {
+  .container {
+    max-width: 900px; /* keep content centered */
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card-header h3 {
+    font-size: 1.6rem;
+  }
+}
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Hide floating tech symbols on small screens */
+  .symbol {
+    display: none;
+  }
+
+  /* Buttons full width for easy tap */
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  /* Card spacing */
+  .card {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  /* Heading smaller */
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 992px) {
+  .btn {
+    width: auto;
+    margin-right: 10px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+}
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Hide floating tech symbols on small screens */
+  .symbol {
+    display: none;
+  }
+
+  /* Heading smaller */
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  /* Search form fields full width */
+  .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Search button full width */
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  /* Job cards spacing */
+  .card {
+    margin: 0.5rem 0;
+    padding: 1rem;
+  }
+
+  .card h4 {
+    font-size: 1.2rem;
+  }
+
+  .card h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1000px; /* keep content centered */
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: auto;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Hide floating tech symbols */
+  .symbol {
+    display: none;
+  }
+
+  /* Heading smaller */
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  /* Search form fields full width */
+  .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Search button full width */
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  /* Job cards compact */
+  .card {
+    margin: 0.5rem 0;
+    padding: 1rem;
+  }
+
+  .card h4 {
+    font-size: 1.2rem;
+  }
+
+  .card h5 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1000px; /* keep content centered */
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: auto;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+/* Make logout button smaller */
+.navbar .btn-logout {
+  padding: 4px 10px;   /* smaller padding */
+  font-size: 0.8rem;   /* smaller text */
+  border-radius: 4px;  /* rounded corners */
+}
+/* Mobile logout button adjustments */
+@media (max-width: 768px) {
+  .navbar .btn-logout {
+    padding: 4px 8px;       /* smaller padding */
+    font-size: 0.75rem;     /* smaller text */
+    border-radius: 4px;     /* rounded corners */
+  }
+}

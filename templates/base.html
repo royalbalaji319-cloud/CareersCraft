@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Floating Tech Symbols -->
+    <div class="symbol" style="left: 10%; animation-delay: 0s">💻</div>
+    <div class="symbol" style="left: 30%; animation-delay: 5s">⚙️</div>
+    <div class="symbol" style="left: 60%; animation-delay: 10s">🔒</div>
+    <div class="symbol" style="left: 80%; animation-delay: 15s">🤖</div>
+
+    <!-- Page Content -->
+    {% block content %}{% endblock %}
+  </body>
+</html>

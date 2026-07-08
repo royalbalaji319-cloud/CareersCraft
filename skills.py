@@ -1,0 +1,23 @@
+skills = [
+    "python",
+    "flask",
+    "django",
+    "mysql",
+    "html",
+    "css",
+    "javascript",
+    "bootstrap",
+    "react",
+    "git",
+    "github",
+    "aws",
+    "docker",
+    "linux",
+    "api",
+    "sql",
+    "machine learning",
+    "artificial intelligence",
+    "data analysis",
+    "pandas",
+    "numpy"
+]
