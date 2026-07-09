@@ -1,13 +1,16 @@
 import os
 
 class Config:
-    SECRET_KEY = os.getenv("balaji123")
 
+    SECRET_KEY = os.getenv("SECRET_KEY", "AI_HIRE_SECRET_KEY")
+
+    # MySQL Configuration
     MYSQL_HOST = os.getenv("MYSQL_HOST")
     MYSQL_PORT = int(os.getenv("MYSQL_PORT", 3306))
     MYSQL_USER = os.getenv("MYSQL_USER")
-    MYSQL_PASSWORD = os.getenv("826412")
+    MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
     MYSQL_DB = os.getenv("MYSQL_DB")
 
-    ADZUNA_APP_ID = os.getenv("e233a6d7")
-    ADZUNA_APP_KEY = os.getenv("14b5d769fb00f54b274d57b2486fdb06")
+    # Adzuna API
+    ADZUNA_APP_ID = os.getenv("ADZUNA_APP_ID")
+    ADZUNA_APP_KEY = os.getenv("ADZUNA_APP_KEY")
