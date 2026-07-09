@@ -30,6 +30,7 @@ def register():
             cur.close()
             return "Email already exists."
 
+        # ✅ Hash password before saving
         hashed_password = generate_password_hash(password)
 
         cur.execute("""
@@ -58,11 +59,11 @@ def login():
         cur.close()
 
         if user:
+            # ✅ Verify hashed password
             if check_password_hash(user[3], password):
                 session["user_id"] = user[0]
                 session["user_name"] = user[1]
                 session["role"] = user[4]
-                # ✅ Redirect to dashboard after successful login
                 return redirect(url_for("auth.dashboard"))
             else:
                 return "Invalid Password"
